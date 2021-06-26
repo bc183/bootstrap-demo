@@ -1,0 +1,33 @@
+
+input:hover, textarea:hover {
+    background-color: lightgray;
+}
+
+footer {
+    background-color: #15171a;
+    color: white;
+    margin-top: 15px;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+header {
+    z-index: 1;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+i {
+    color: goldenrod;
+}
+
+
+
+
+
+
+
