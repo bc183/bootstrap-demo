@@ -9,8 +9,16 @@ footer {
     margin-top: 15px;
 }
 
+.error {
+    border-color: red;
+}
+
 .carousel-item {
     height: 400px;
+}
+
+small {
+    margin-top: 5px;
 }
 
 header {

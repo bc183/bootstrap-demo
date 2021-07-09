@@ -34,7 +34,7 @@
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li>
-                        <a href="index.html" class="btn"><i class="fas fa-sign-out-alt" style="color: white;"></i></a>
+                        <button onclick="logout()" class="btn"><i class="fas fa-sign-out-alt" style="color: white;"></i></a>
                     </li>
                 </ul>
               </div>
@@ -46,45 +46,18 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 col-md-8">
-                <table class="table table-dark table-hover table-striped">
+                <small class="alert alert-warning" id="no-data">No data available. You can add expense to see it displayed here</small>
+                <table class="table table-dark table-hover table-striped" id="table">
                     <thead>
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Amount</th>
                         <th scope="col">Date</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Books</td>
-                        <td>Comic Books</td>
-                        <td>28-03-2020</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Books</td>
-                        <td>Comic Books</td>
-                        <td>28-03-2020</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Books</td>
-                        <td>Comic Books</td>
-                        <td>28-03-2020</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Books</td>
-                        <td>Comic Books</td>
-                        <td>28-03-2020</td>
-                      </tr><tr>
-                        <th scope="row">3</th>
-                        <td>Books</td>
-                        <td>Comic Books</td>
-                        <td>28-03-2020</td>
-                      </tr>
+                    <tbody id="expense-table">
                     </tbody>
                   </table>
             </div>
@@ -99,22 +72,31 @@
                         <form>
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Title</label>
-                              <input type="email" placeholder="Title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <input type="email" placeholder="Title" class="form-control" id="title" aria-describedby="emailHelp" required>
+                              <small class="alert alert-danger" id="err-title"></small>
                             </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">description</label>
-                              <input type="text" placeholder="Description" class="form-control" id="exampleInputPassword1">
+                              <input type="text" placeholder="Description" class="form-control" id="description">
                             </div>
                             <div class="mb-3">
                                 <label for="amount" class="form-label">Amount</label>
                                 <input type="number" placeholder="Amount" class="form-control" id="amount">
+                                <small class="alert alert-danger" id="err-amount"></small>
                             </div>
                             <div class="mb-3">
                                 <label for="date" class="form-label">Date</label>
                                 <input type="date" class="form-control" id="date">
+                                <small class="alert alert-danger" id="err-date"></small>
                             </div>
-                            <button href="home.html" type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" onclick="addExpense()" class="btn btn-primary">Save</button>
                           </form>
+                          <div class="alert alert-success alert-dismissible fade show" id="save-msg" role="alert">
+                            Expense added successfully.
+                            <button type="button" onclick="dismiss()" class="close btn" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -208,6 +190,7 @@
   <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+    <script src="expense.js"></script>
 </body>
 
 </html>
