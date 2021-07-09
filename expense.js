@@ -81,25 +81,31 @@ const addExpense = () => {
     if (title.trim().length === 0) {
         errorTitle.innerHTML = "Title cannot be empty";
         errorTitle.style.display = "block";
+        titleElement.classList.add("error");
         isError = true;
     } else {
         errorTitle.style.display = "none";
+        titleElement.classList.remove("error");
     }
 
     if (amount.toString().trim().length === 0) {
         errorAmount.innerHTML = "Amount cannot be empty";
         errorAmount.style.display = "block";
+        amountElement.classList.add("error");
         isError = true;
     } else {
         errorAmount.style.display = "none";
+        amountElement.classList.remove("error");
     }
 
     if (date.trim().length === 0) {
         errorDate.innerHTML = "Date cannot be empty";
         errorDate.style.display = "block";
+        dateElement.classList.add("error");
         isError = true;
     } else {
         errorDate.style.display = "none";
+        dateElement.classList.remove("error");
     }
 
     if (isError) {

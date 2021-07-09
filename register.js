@@ -34,36 +34,44 @@ const register = () => {
     if (email.trim().length === 0) {
         errorEmail.innerHTML = "Email is required";
         errorEmail.style.display = "block";
+        emailElement.setAttribute("class", "form-control error");
         isError = true;
     } else {
         errorEmail.style.display = "none";
+        emailElement.setAttribute("class", "form-control");
     }
 
     if (password.trim().length === 0) {
         errorPassword.innerHTML = "password is required";
         errorPassword.style.display = "block";
+        passwordElement.setAttribute("class", "form-control error");
         isError = true;
 
     } else {
         errorPassword.style.display = "none";
+        emailElement.setAttribute("class", "form-control");
     }
 
     if (confirmPassword.trim().length === 0) {
         errorConfirm.innerHTML = "Confirm password is required";
         errorConfirm.style.display = "block";
+        confirmElement.setAttribute("class","form-control error");
         isError = true;
 
     } else {
         errorConfirm.style.display = "none";
+        confirmElement.setAttribute("class", "form-control");
     }
 
     if (password !== confirmPassword) {
         error.innerHTML = "Passowrd and confirm password do not match."
         error.style.display = "block";
+        confirmElement.setAttribute("class", "form-control error");
         isError = true;
 
     } else {
         error.style.display = "none";
+        confirmElement.setAttribute("class", "form-control");
     }
 
     if (isError) {

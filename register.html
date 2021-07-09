@@ -47,23 +47,23 @@
                         <!-- Form starting -->
                         <form>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="email" placeholder="Email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" placeholder="Email" class="form-control" name="email" id="email" aria-describedby="emailHelp" required>
                               <small class="alert alert-danger" id="err-email"></small>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" placeholder="Password" class="form-control" id="password" required>
+                              <label for="password" class="form-label">Password</label>
+                              <input type="password" placeholder="Password" class="form-control" name="password" id="password" required>
                               <small class="alert alert-danger" id="err-pass"></small>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                                <input type="password" placeholder="Confirm Password" class="form-control" id="confirm-password" required>
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" placeholder="Confirm Password" name="confirm-password" class="form-control" id="confirm-password" required>
                                 <small class="alert alert-danger" id="err-confirm"></small>
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">Tell us something about youself</label>
-                                <textarea placeholder="description" class="form-control" id="description"></textarea>
+                                <textarea placeholder="description" name="description" class="form-control" id="description"></textarea>
                             </div>
                             <small class="alert alert-danger" id="error"></small>
                             <button type="button" onclick="register()" class="btn btn-primary">Register</button>
